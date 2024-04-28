@@ -1,6 +1,12 @@
 # instagram_app
 
-A new Flutter project.
+If you want to run this app the do the following: 
+
+- Create Firebase Project
+- Enable Authentication
+- Make Firestore Rules
+- Create Android, iOS & Web Apps
+- Put firebase_options.dart file in lib folder
 
 ## Getting Started
 
