@@ -23,7 +23,7 @@ class _AddPostPageState extends State<AddPostPage> {
   void postImage(
     String uid,
     String username,
-    String profImage,
+    String? profImage,
   ) async {
     try{
       setState(() {
@@ -138,7 +138,7 @@ class _AddPostPageState extends State<AddPostPage> {
           TextButton(
             onPressed: () {
               if(_file != null && _captionController.text.isNotEmpty){
-                postImage(_user.uid, _user.username, _user.imageUrl!);
+                postImage(_user.uid, _user.username, _user.imageUrl);
               }else if((_file == null && _captionController.text.isEmpty) || _file == null){
                 showDialog(
                   context: context, 

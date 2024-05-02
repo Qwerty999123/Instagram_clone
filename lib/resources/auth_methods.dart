@@ -89,7 +89,7 @@ class AuthMethods{
     required Uint8List file,
     required String uid,
     required String username,
-    required String profImage,
+    required String? profImage,
   }) async{
     String res = 'Some error occured';
     try{
@@ -147,7 +147,7 @@ class AuthMethods{
     required String postId,
     required String uid,
     required String username,
-    required String profImage,
+    required String? profImage,
     required List likes,
   }) async {
 

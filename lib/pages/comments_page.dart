@@ -54,8 +54,13 @@ class _CommentsPageState extends State<CommentsPage> {
             children: [
               CircleAvatar(
                 radius: 18,
-                backgroundImage: NetworkImage(
+                backgroundImage: _user.imageUrl != null 
+                ? NetworkImage(
                   _user.imageUrl!
+                )
+                : NetworkImage(
+                  'https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg',
+                
                 ),
               ),
               const SizedBox(
@@ -80,7 +85,7 @@ class _CommentsPageState extends State<CommentsPage> {
                     postId: widget.snap['postId'], 
                     uid: _user.uid, 
                     username: _user.username, 
-                    profImage: _user.imageUrl!,
+                    profImage: _user.imageUrl,
                     likes: []
                   );
                   _controller.text = '';

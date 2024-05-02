@@ -36,6 +36,7 @@ class _SignupPageState extends State<SignupPage> {
 
   void selectImage() async{
     Uint8List im = await pickImage(ImageSource.gallery);
+
     setState(() {
       _image = im;
     });
@@ -85,14 +86,14 @@ class _SignupPageState extends State<SignupPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Flexible(flex: 2, child: Container(),),
+              Flexible(child: Container(),),
               SvgPicture.asset('assets/ic_instagram.svg',
                 color: primaryColor, 
                 height: 64
               ),
-
+                    
               const SizedBox(height: 30,),
-
+                    
               Stack(
                 children: [
                   _image != null 
@@ -122,28 +123,28 @@ class _SignupPageState extends State<SignupPage> {
                   )
                 ],
               ),
-
+                    
               const SizedBox(height: 30,),
               TextFieldInput(
                 textEditingController: _usernamecontroller,
                 hint: 'Enter your username',
                 textInputType: TextInputType.emailAddress
               ),
-
+                    
               const SizedBox(height: 20),
               TextFieldInput(
                 textEditingController: _emailcontroller,
                 hint: 'Enter your email',
                 textInputType: TextInputType.visiblePassword,
               ),
-
+                    
               const SizedBox(height: 20),
               TextFieldInput(
                 textEditingController: _biocontroller,
                 hint: 'Enter your bio',
                 textInputType: TextInputType.visiblePassword,
               ),
-
+                    
               const SizedBox(height: 20),
               TextFieldInput(
                 textEditingController: _passcontroller,
@@ -151,9 +152,9 @@ class _SignupPageState extends State<SignupPage> {
                 textInputType: TextInputType.visiblePassword,
                 isPass: true,
               ),
-
+                    
               const SizedBox(height: 20),
-
+                    
               ElevatedButton(
                 onPressed: signUpUser, 
                 style: ElevatedButton.styleFrom(
@@ -164,7 +165,7 @@ class _SignupPageState extends State<SignupPage> {
                   ),
                   minimumSize: const Size(double.infinity, 45)
                 ),
-
+                    
                 child: _isLoading ? const Center(
                   child: CircularProgressIndicator(
                     color: primaryColor,
@@ -172,9 +173,9 @@ class _SignupPageState extends State<SignupPage> {
                 ) 
                 : const Text('Sign up'),
               ),
-
+                    
               Flexible(flex: 2, child: Container()),
-
+                    
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -199,7 +200,7 @@ class _SignupPageState extends State<SignupPage> {
                 ],
               ),
               
-
+                    
             ],
           ),
         )

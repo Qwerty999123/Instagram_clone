@@ -24,9 +24,16 @@ class _CommentCardState extends State<CommentCard> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CircleAvatar(
+          widget.snap['profImage'] !=  null
+          ? CircleAvatar(
             backgroundImage: NetworkImage(
               widget.snap['profImage']
+            ),
+          )
+          : CircleAvatar(
+            backgroundImage: NetworkImage(
+              'https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg',
+                
             ),
           ),
           const SizedBox(
