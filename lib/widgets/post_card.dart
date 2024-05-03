@@ -61,7 +61,6 @@ class _PostCardState extends State<PostCard> {
             child: Row(
               children: [
                 widget.snap['profImage'] != null 
-
                 ? CircleAvatar(
                   backgroundImage: NetworkImage(
                     widget.snap['profImage']
